@@ -85,7 +85,7 @@ aur_install_and_launch() {
 show_learn_menu() {
   case $(menu "Learn" "  Keybindings\n  Sublingual OS\n  Hyprland\n󰣇  Arch\n  Neovim\n󱆃  Bash") in
   *Keybindings*) sublingual-os-menu-keybindings ;;
-  *Omarchy*) omarchy-launch-webapp "https://learn.omacom.io/2/the-omarchy-manual" ;;
+  *"Sublingual OS"*) sublingual-os-launch-webapp "https://learn.omacom.io/2/the-omarchy-manual" ;;
   *Hyprland*) sublingual-os-launch-webapp "https://wiki.hypr.land/" ;;
   *Arch*) sublingual-os-launch-webapp "https://wiki.archlinux.org/title/Main_page" ;;
   *Bash*) sublingual-os-launch-webapp "https://devhints.io/bash" ;;
@@ -505,7 +505,7 @@ show_remove_elixir_menu() {
 
 show_update_menu() {
   case $(menu "Update" "  Sublingual OS\n󰔫  Channel\n  Config\n󰸌  Extra Themes\n  Process\n󰇅  Hardware\n  Firmware\n  Password\n  Timezone\n  Time") in
-  *Sublingual OS*) present_terminal sublingual-os-update ;;
+  *"Sublingual OS"*) present_terminal sublingual-os-update ;;
   *Channel*) show_update_channel_menu ;;
   *Config*) show_update_config_menu ;;
   *Themes*) present_terminal sublingual-os-theme-update ;;
