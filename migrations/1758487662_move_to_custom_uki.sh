@@ -3,7 +3,7 @@ echo "Update UKI to custom named entry"
 if command -v limine &>/dev/null && [[ -f /etc/default/limine ]]; then
   if grep -q "^ENABLE_UKI=yes" /etc/default/limine; then
     if ! grep -q "^CUSTOM_UKI_NAME=" /etc/default/limine; then
-      sudo sed -i '/^ENABLE_UKI=yes/a CUSTOM_UKI_NAME="omarchy"' /etc/default/limine
+      sudo sed -i '/^ENABLE_UKI=yes/a CUSTOM_UKI_NAME="sublingual-os"' /etc/default/limine
     fi
 
     # Remove the archinstall-created Limine entry
@@ -13,7 +13,7 @@ if command -v limine &>/dev/null && [[ -f /etc/default/limine ]]; then
 
     sudo limine-update
 
-    uki_file=$(find /boot/EFI/Linux/ -name "omarchy*.efi" -printf "%f\n" 2>/dev/null | head -1)
+    uki_file=$(find /boot/EFI/Linux/ -name "sublingual-os*.efi" -printf "%f\n" 2>/dev/null | head -1)
 
     if [[ -n $uki_file ]]; then
       while IFS= read -r bootnum; do

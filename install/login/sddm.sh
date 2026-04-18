@@ -1,4 +1,4 @@
-# Install omarchy SDDM theme
+# Install sublingual-os SDDM theme
 sublingual-os-refresh-sddm
 
 # Setup SDDM login service
@@ -10,7 +10,7 @@ User=$USER
 Session=hyprland-uwsm
 
 [Theme]
-Current=omarchy
+Current=sublingual-os
 EOF
 fi
 

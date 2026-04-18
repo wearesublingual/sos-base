@@ -11,7 +11,7 @@ fi
 pgrep -f org.sublingual-os.screensaver && exit 0
 
 # Allow screensaver to be turned off but also force started
-if [[ -f ~/.local/state/omarchy/toggles/screensaver-off ]] && [[ $1 != "force" ]]; then
+if [[ -f ~/.local/state/sublingual-os/toggles/screensaver-off ]] && [[ $1 != "force" ]]; then
   exit 1
 fi
 

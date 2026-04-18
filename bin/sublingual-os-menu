@@ -203,11 +203,11 @@ show_style_menu() {
 }
 
 show_theme_menu() {
-  sublingual-os-launch-walker -m menus:omarchythemes --width 800 --minheight 400
+  sublingual-os-launch-walker -m menus:sublingualOsThemes --width 800 --minheight 400
 }
 
 show_background_menu() {
-  sublingual-os-launch-walker -m menus:omarchyBackgroundSelector --width 800 --minheight 400
+  sublingual-os-launch-walker -m menus:sublingualOsBackgroundSelector --width 800 --minheight 400
 }
 
 show_font_menu() {
@@ -277,7 +277,7 @@ show_setup_config_menu() {
 show_setup_system_menu() {
   local options=""
 
-  if [[ -f ~/.local/state/omarchy/toggles/suspend-off ]]; then
+  if [[ -f ~/.local/state/sublingual-os/toggles/suspend-off ]]; then
     options="$options󰒲  Enable Suspend"
   else
     options="$options󰒲  Disable Suspend"
@@ -578,7 +578,7 @@ show_about() {
 
 show_system_menu() {
   local options="󱄄  Screensaver\n  Lock"
-  [[ ! -f ~/.local/state/omarchy/toggles/suspend-off ]] && options="$options\n󰒲  Suspend"
+  [[ ! -f ~/.local/state/sublingual-os/toggles/suspend-off ]] && options="$options\n󰒲  Suspend"
   sublingual-os-hibernation-available && options="$options\n󰤁  Hibernate"
   options="$options\n󰍃  Logout\n󰜉  Restart\n󰐥  Shutdown"
 

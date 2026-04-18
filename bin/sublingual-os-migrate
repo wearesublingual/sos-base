@@ -3,7 +3,7 @@
 # Run all pending migrations to bring the system in line with the installed version.
 
 # Where we store an empty file for each migration that has already been performed.
-STATE_DIR="$HOME/.local/state/omarchy/migrations"
+STATE_DIR="$HOME/.local/state/sublingual-os/migrations"
 mkdir -p "$STATE_DIR"
 
 # Skipped migrations are tracked separately

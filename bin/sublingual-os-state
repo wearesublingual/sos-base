@@ -4,7 +4,7 @@
 # Usage: sublingual-os-state <set|clear> <state-name-or-pattern>
 # Used to track whether features like suspend, idle lock, etc are enabled or disabled.
 
-STATE_DIR="$HOME/.local/state/omarchy"
+STATE_DIR="$HOME/.local/state/sublingual-os"
 mkdir -p "$STATE_DIR"
 
 COMMAND="$1"

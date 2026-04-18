@@ -9,7 +9,7 @@ if ! grep -q "map shift+insert paste_from_clipboard" "$KITTY_CONF"; then
 fi
 
 echo "Copy hooks examples"
-cp -r $SUBLINGUAL_OS_PATH/config/omarchy/* $HOME/.config/sublingual-os/
+cp -r $SUBLINGUAL_OS_PATH/config/sublingual-os/* $HOME/.config/sublingual-os/
 
 echo "Add packages for updated sublingual-os-cmd-screenshot"
 sublingual-os-pkg-add grim slurp

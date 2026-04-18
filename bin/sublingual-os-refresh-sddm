@@ -2,5 +2,5 @@
 
 # Refresh the SDDM theme from default
 
-sudo rm -rf /usr/share/sddm/themes/omarchy
-sudo cp -r $SUBLINGUAL_OS_PATH/default/sddm/omarchy /usr/share/sddm/themes/omarchy
+sudo rm -rf /usr/share/sddm/themes/sublingual-os
+sudo cp -r $SUBLINGUAL_OS_PATH/default/sddm/sublingual-os /usr/share/sddm/themes/sublingual-os

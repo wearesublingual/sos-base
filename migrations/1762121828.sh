@@ -45,7 +45,7 @@ waybar_config=~/.config/waybar/config.jsonc
 if [[ -f $waybar_config ]]; then
   sed -i 's|"on-click-right": "sublingual-os-launch-terminal"|"on-click-right": "xdg-terminal-exec"|' "$waybar_config"
   sed -i 's|"on-click": "\$TERMINAL -e btop"|"on-click": "xdg-terminal-exec btop"|' "$waybar_config"
-  sed -i 's|"on-click": "\$TERMINAL --class=Wiremix -e wiremix"|"on-click": "xdg-terminal-exec --app-id=com.omarchy.Wiremix -e wiremix"|' "$waybar_config"
+  sed -i 's|"on-click": "\$TERMINAL --class=Wiremix -e wiremix"|"on-click": "xdg-terminal-exec --app-id=com.sublingual-os.Wiremix -e wiremix"|' "$waybar_config"
   sublingual-os-state set restart-waybar-required
 fi
 
@@ -53,6 +53,6 @@ fi
 system_conf=~/.config/hypr/apps/system.conf
 if [[ -f $system_conf ]]; then
   if grep -q 'class:(.*|Impala|' "$system_conf" || grep -q 'class:(.*|Wiremix|' "$system_conf" || grep -q '|Sublingual OS|' "$system_conf"; then
-    sed -i 's/\bImpala\b/com.omarchy.Impala/g; s/\bWiremix\b/com.omarchy.Wiremix/g; s/|Sublingual OS|/|com.omarchy.Sublingual OS|/g' "$system_conf"
+    sed -i 's/\bImpala\b/com.sublingual-os.Impala/g; s/\bWiremix\b/com.sublingual-os.Wiremix/g; s/|Sublingual OS|/|com.sublingual-os.Sublingual OS|/g' "$system_conf"
   fi
 fi

@@ -7,7 +7,7 @@ USER_BACKGROUNDS_DIR="$HOME/.config/sublingual-os/backgrounds"
 if [[ -d $SUBLINGUAL_OS_DIR/themes ]]; then
   cd "$SUBLINGUAL_OS_DIR"
 
-  # Get list of git-tracked background files (relative to omarchy dir)
+  # Get list of git-tracked background files (relative to sublingual-os dir)
   mapfile -t TRACKED_BACKGROUNDS < <(git ls-files --cached 'themes/*/backgrounds/*' 2>/dev/null)
 
   # Find all background files and check if they're untracked (user-added)

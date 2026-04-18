@@ -55,7 +55,7 @@ To create a new migration, run `sublingual-os-dev-add-migration --no-edit`. This
 Migration format:
 - No shebang line
 - Start with an `echo` describing what the migration does
-- Use `$SUBLINGUAL_OS_PATH` to reference the omarchy directory
+- Use `$SUBLINGUAL_OS_PATH` to reference the sublingual-os directory
 
 Example:
 ```bash

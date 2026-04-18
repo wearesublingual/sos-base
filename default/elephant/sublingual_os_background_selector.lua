@@ -1,4 +1,4 @@
-Name = "omarchyBackgroundSelector"
+Name = "sublingualOsBackgroundSelector"
 NamePretty = "Sublingual OS Background Selector"
 Cache = false
 HideFromProviderlist = true

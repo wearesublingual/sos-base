@@ -15,14 +15,14 @@ sublingual-os-refresh-pacman
 sudo systemctl restart systemd-timesyncd
 sudo pacman -Sy # Normally not advisable, but we'll do a full -Syu before finishing
 
-mkdir -p ~/.local/state/omarchy/migrations
-touch ~/.local/state/omarchy/migrations/1751134560.sh
+mkdir -p ~/.local/state/sublingual-os/migrations
+touch ~/.local/state/sublingual-os/migrations/1751134560.sh
 
 # Remove old AUR packages to prevent a super lengthy build on old Sublingual OS installs
 sublingual-os-pkg-drop zoom qt5-remoteobjects wf-recorder wl-screenrec
 
 # Get rid of old AUR packages
 bash $SUBLINGUAL_OS_PATH/migrations/1756060611.sh
-touch ~/.local/state/omarchy/migrations/1756060611.sh
+touch ~/.local/state/sublingual-os/migrations/1756060611.sh
 
 bash sublingual-os-update-perform

@@ -26,5 +26,5 @@ EOF
 
 # Link the visual theme menu config
 mkdir -p ~/.config/elephant/menus
-ln -snf $SUBLINGUAL_OS_PATH/default/elephant/omarchy_themes.lua ~/.config/elephant/menus/omarchy_themes.lua
-ln -snf $SUBLINGUAL_OS_PATH/default/elephant/omarchy_background_selector.lua ~/.config/elephant/menus/omarchy_background_selector.lua
+ln -snf $SUBLINGUAL_OS_PATH/default/elephant/sublingual_os_themes.lua ~/.config/elephant/menus/sublingual_os_themes.lua
+ln -snf $SUBLINGUAL_OS_PATH/default/elephant/sublingual_os_background_selector.lua ~/.config/elephant/menus/sublingual_os_background_selector.lua

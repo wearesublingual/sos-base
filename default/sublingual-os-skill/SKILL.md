@@ -1,5 +1,5 @@
 ---
-name: omarchy
+name: sublingual-os
 description: >
   REQUIRED for end-user customization of Linux desktop, window manager, or system config.
   Use when editing ~/.config/hypr/, ~/.config/waybar/, ~/.config/walker/,
@@ -7,7 +7,7 @@ description: >
   or ~/.config/sublingual-os/. Triggers: Hyprland, window rules, animations, keybindings,
   monitors, gaps, borders, blur, opacity, waybar, walker, terminal config, themes,
   wallpaper, night light, idle, lock screen, screenshots, layer rules, workspace
-  settings, display config, and user-facing omarchy commands. Excludes Sublingual OS
+  settings, display config, and user-facing sublingual-os commands. Excludes Sublingual OS
   source development in ~/.local/share/sublingual-os/ and sublingual-os-dev-* workflows.
 ---
 
@@ -56,7 +56,7 @@ This directory contains Sublingual OS's source files managed by git. Any changes
 ```
 
 **Reading `~/.local/share/sublingual-os/` is SAFE and useful** - do it freely to:
-- Understand how omarchy commands work: `cat $(which sublingual-os-theme-set)`
+- Understand how sublingual-os commands work: `cat $(which sublingual-os-theme-set)`
 - See default configs before customizing: `cat ~/.local/share/sublingual-os/config/waybar/config.jsonc`
 - Check stock theme files to copy for customization
 - Reference default hyprland settings: `cat ~/.local/share/sublingual-os/default/hypr/*`
@@ -87,7 +87,7 @@ Sublingual OS is built on:
 Sublingual OS provides ~145 commands following `sublingual-os-<category>-<action>` pattern.
 
 ```bash
-# List all omarchy commands
+# List all sublingual-os commands
 compgen -c | grep -E '^sublingual-os-' | sort -u
 
 # Find commands by category
@@ -340,12 +340,12 @@ sublingual-os-reinstall
 
 When user requests system changes:
 
-1. **Is it a stock omarchy command?** Use it directly
+1. **Is it a stock sublingual-os command?** Use it directly
 2. **Is it a config edit?** Edit in `~/.config/`, never `~/.local/share/sublingual-os/`
 3. **Is it a theme customization?** Create a NEW custom theme directory
 4. **Is it automation?** Use hooks in `~/.config/sublingual-os/hooks/`
 5. **Is it a package install?** Use `sublingual-os-pkg-add` (or `sublingual-os-pkg-aur-add` for AUR-only packages)
-6. **Unsure if command exists?** Search with `compgen -c | grep omarchy`
+6. **Unsure if command exists?** Search with `compgen -c | grep sublingual-os`
 
 ## Out of Scope
 

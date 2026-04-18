@@ -1,7 +1,7 @@
 --
 -- Dynamic Sublingual OS Theme Menu for Elephant/Walker
 --
-Name = "omarchythemes"
+Name = "sublingualOsThemes"
 NamePretty = "Sublingual OS Themes"
 HideFromProviderlist = true
 
@@ -32,8 +32,8 @@ end
 function GetEntries()
   local entries = {}
   local user_theme_dir = os.getenv("HOME") .. "/.config/sublingual-os/themes"
-  local omarchy_path = os.getenv("SUBLINGUAL_OS_PATH") or ""
-  local default_theme_dir = omarchy_path .. "/themes"
+  local sublingual_os_path = os.getenv("SUBLINGUAL_OS_PATH") or ""
+  local default_theme_dir = sublingual_os_path .. "/themes"
 
   local seen_themes = {}
 
