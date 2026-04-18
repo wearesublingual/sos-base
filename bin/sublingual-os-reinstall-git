@@ -3,6 +3,6 @@ set -e
 
 # Reinstall the Omarchy configuration directory from the git source.
 
-git clone --depth=1 "https://github.com/basecamp/omarchy.git" ~/.local/share/omarchy-new >/dev/null
-mv $OMARCHY_PATH ~/.local/share/omarchy-old
-mv ~/.local/share/omarchy-new $OMARCHY_PATH
+git clone --depth=1 "https://github.com/basecamp/omarchy.git" ~/.local/share/sublingual-os-new >/dev/null
+mv $SUBLINGUAL_OS_PATH ~/.local/share/sublingual-os-old
+mv ~/.local/share/sublingual-os-new $SUBLINGUAL_OS_PATH

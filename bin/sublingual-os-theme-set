@@ -1,18 +1,18 @@
 #!/bin/bash
 
 if [[ -z $1 ]]; then
-  echo "Usage: omarchy-theme-set <theme-name>"
+  echo "Usage: sublingual-os-theme-set <theme-name>"
   exit 1
 fi
 
-CURRENT_THEME_PATH="$HOME/.config/omarchy/current/theme"
-NEXT_THEME_PATH="$HOME/.config/omarchy/current/next-theme"
-USER_THEMES_PATH="$HOME/.config/omarchy/themes"
-OMARCHY_THEMES_PATH="$OMARCHY_PATH/themes"
+CURRENT_THEME_PATH="$HOME/.config/sublingual-os/current/theme"
+NEXT_THEME_PATH="$HOME/.config/sublingual-os/current/next-theme"
+USER_THEMES_PATH="$HOME/.config/sublingual-os/themes"
+SUBLINGUAL_OS_THEMES_PATH="$SUBLINGUAL_OS_PATH/themes"
 
 THEME_NAME=$(echo "$1" | sed -E 's/<[^>]+>//g' | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
 
-if [[ ! -d $OMARCHY_THEMES_PATH/$THEME_NAME ]] && [[ ! -d $USER_THEMES_PATH/$THEME_NAME ]]; then
+if [[ ! -d $SUBLINGUAL_OS_THEMES_PATH/$THEME_NAME ]] && [[ ! -d $USER_THEMES_PATH/$THEME_NAME ]]; then
   echo "Theme '$THEME_NAME' does not exist"
   exit 1
 fi
@@ -22,39 +22,39 @@ rm -rf "$NEXT_THEME_PATH"
 mkdir -p "$NEXT_THEME_PATH"
 
 # Copy official theme first, then overlay user customizations on top
-cp -r "$OMARCHY_THEMES_PATH/$THEME_NAME/"* "$NEXT_THEME_PATH/" 2>/dev/null
+cp -r "$SUBLINGUAL_OS_THEMES_PATH/$THEME_NAME/"* "$NEXT_THEME_PATH/" 2>/dev/null
 cp -r "$USER_THEMES_PATH/$THEME_NAME/"* "$NEXT_THEME_PATH/" 2>/dev/null
 
 # Generate dynamic configs
-omarchy-theme-set-templates
+sublingual-os-theme-set-templates
 
 # Swap next theme in as current
 rm -rf "$CURRENT_THEME_PATH"
 mv "$NEXT_THEME_PATH" "$CURRENT_THEME_PATH"
 
 # Store theme name for reference
-echo "$THEME_NAME" >"$HOME/.config/omarchy/current/theme.name"
+echo "$THEME_NAME" >"$HOME/.config/sublingual-os/current/theme.name"
 
 # Change background with theme
-omarchy-theme-bg-next
+sublingual-os-theme-bg-next
 
 # Restart components to apply new theme
 if pgrep -x waybar >/dev/null; then
-  omarchy-restart-waybar
+  sublingual-os-restart-waybar
 fi
-omarchy-restart-swayosd
-omarchy-restart-terminal
-omarchy-restart-hyprctl
-omarchy-restart-btop
-omarchy-restart-opencode
-omarchy-restart-mako
+sublingual-os-restart-swayosd
+sublingual-os-restart-terminal
+sublingual-os-restart-hyprctl
+sublingual-os-restart-btop
+sublingual-os-restart-opencode
+sublingual-os-restart-mako
 
 # Change app-specific themes
-omarchy-theme-set-gnome
-omarchy-theme-set-browser
-omarchy-theme-set-vscode
-omarchy-theme-set-obsidian
-omarchy-theme-set-keyboard
+sublingual-os-theme-set-gnome
+sublingual-os-theme-set-browser
+sublingual-os-theme-set-vscode
+sublingual-os-theme-set-obsidian
+sublingual-os-theme-set-keyboard
 
 # Call hook on theme set
-omarchy-hook theme-set "$THEME_NAME"
+sublingual-os-hook theme-set "$THEME_NAME"

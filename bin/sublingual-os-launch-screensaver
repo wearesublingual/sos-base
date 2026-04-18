@@ -8,7 +8,7 @@ if ! command -v tte &>/dev/null; then
 fi
 
 # Exit early if screensave is already running
-pgrep -f org.omarchy.screensaver && exit 0
+pgrep -f org.sublingual-os.screensaver && exit 0
 
 # Allow screensaver to be turned off but also force started
 if [[ -f ~/.local/state/omarchy/toggles/screensaver-off ]] && [[ $1 != "force" ]]; then
@@ -18,7 +18,7 @@ fi
 # Silently quit Walker on overlay
 walker -q
 
-focused=$(omarchy-hyprland-monitor-focused)
+focused=$(sublingual-os-hyprland-monitor-focused)
 terminal=$(xdg-terminal-exec --print-id)
 
 for m in $(hyprctl monitors -j | jq -r '.[] | .name'); do
@@ -27,23 +27,23 @@ for m in $(hyprctl monitors -j | jq -r '.[] | .name'); do
   case $terminal in
   *Alacritty*)
     hyprctl dispatch exec -- \
-      alacritty --class=org.omarchy.screensaver \
-      --config-file ~/.local/share/omarchy/default/alacritty/screensaver.toml \
-      -e omarchy-cmd-screensaver
+      alacritty --class=org.sublingual-os.screensaver \
+      --config-file ~/.local/share/sublingual-os/default/alacritty/screensaver.toml \
+      -e sublingual-os-cmd-screensaver
     ;;
   *ghostty*)
     hyprctl dispatch exec -- \
-      ghostty --class=org.omarchy.screensaver \
-      --config-file=~/.local/share/omarchy/default/ghostty/screensaver \
+      ghostty --class=org.sublingual-os.screensaver \
+      --config-file=~/.local/share/sublingual-os/default/ghostty/screensaver \
       --font-size=18 \
-      -e omarchy-cmd-screensaver
+      -e sublingual-os-cmd-screensaver
     ;;
   *kitty*)
     hyprctl dispatch exec -- \
-      kitty --class=org.omarchy.screensaver \
+      kitty --class=org.sublingual-os.screensaver \
       --override font_size=18 \
       --override window_padding_width=0 \
-      -e omarchy-cmd-screensaver
+      -e sublingual-os-cmd-screensaver
     ;;
   *)
     notify-send -u low "✋  Screensaver only runs in Alacritty, Ghostty, or Kitty"

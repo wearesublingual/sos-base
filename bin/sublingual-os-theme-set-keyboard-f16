@@ -1,8 +1,8 @@
 #!/bin/bash
 
-FRAMEWORK16_THEME=~/.config/omarchy/current/theme/keyboard.rgb
+FRAMEWORK16_THEME=~/.config/sublingual-os/current/theme/keyboard.rgb
 
-if omarchy-cmd-present qmk_hid && [[ -f $FRAMEWORK16_THEME ]]; then
+if sublingual-os-cmd-present qmk_hid && [[ -f $FRAMEWORK16_THEME ]]; then
   hex=$(cat "$FRAMEWORK16_THEME")
   hex="${hex#\#}"
 

@@ -3,7 +3,7 @@
 # Install one of the approved terminals and set it as the default for Omarchy (Super + Return etc).
 
 if (($# == 0)); then
-  echo "Usage: omarchy-install-terminal [alacritty|ghostty|kitty]"
+  echo "Usage: sublingual-os-install-terminal [alacritty|ghostty|kitty]"
   exit 1
 fi
 
@@ -21,11 +21,11 @@ kitty) desktop_id="kitty.desktop" ;;
 esac
 
 # Install package
-if omarchy-pkg-add $package; then
+if sublingual-os-pkg-add $package; then
   # Copy custom desktop entry for alacritty with X-TerminalArg* keys
   if [[ $package == "alacritty" ]]; then
     mkdir -p ~/.local/share/applications
-    cp $OMARCHY_PATH/applications/Alacritty.desktop ~/.local/share/applications/
+    cp $SUBLINGUAL_OS_PATH/applications/Alacritty.desktop ~/.local/share/applications/
   fi
 
   # Update xdg-terminals.list to prioritize the proper terminal

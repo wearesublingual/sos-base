@@ -2,8 +2,8 @@
 
 # Refresh the current theme from its templates.
 
-THEME_NAME_PATH="$HOME/.config/omarchy/current/theme.name"
+THEME_NAME_PATH="$HOME/.config/sublingual-os/current/theme.name"
 
 if [[ -f $THEME_NAME_PATH ]]; then
-  omarchy-theme-set "$(cat $THEME_NAME_PATH)"
+  sublingual-os-theme-set "$(cat $THEME_NAME_PATH)"
 fi

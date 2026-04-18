@@ -1,3 +1,3 @@
 echo "Add potentially missing dependency for power profile controls"
 
-omarchy-pkg-add python-gobject
+sublingual-os-pkg-add python-gobject

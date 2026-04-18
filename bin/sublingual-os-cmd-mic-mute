@@ -2,8 +2,8 @@
 
 # Toggle microphone mute. Dell XPS systems get special handling for the hardware LED.
 
-if omarchy-hw-match "XPS"; then
-  omarchy-cmd-mic-mute-xps
+if sublingual-os-hw-match "XPS"; then
+  sublingual-os-cmd-mic-mute-xps
 else
-  swayosd-client --monitor "$(omarchy-hyprland-monitor-focused)" --input-volume mute-toggle
+  swayosd-client --monitor "$(sublingual-os-hyprland-monitor-focused)" --input-volume mute-toggle
 fi

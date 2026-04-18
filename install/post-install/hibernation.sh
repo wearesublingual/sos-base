@@ -1,2 +1,2 @@
 # Enable hibernation
-omarchy-hibernation-setup --force
+sublingual-os-hibernation-setup --force

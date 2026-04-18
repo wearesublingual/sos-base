@@ -4,11 +4,11 @@ description: >
   REQUIRED for end-user customization of Linux desktop, window manager, or system config.
   Use when editing ~/.config/hypr/, ~/.config/waybar/, ~/.config/walker/,
   ~/.config/alacritty/, ~/.config/kitty/, ~/.config/ghostty/, ~/.config/mako/,
-  or ~/.config/omarchy/. Triggers: Hyprland, window rules, animations, keybindings,
+  or ~/.config/sublingual-os/. Triggers: Hyprland, window rules, animations, keybindings,
   monitors, gaps, borders, blur, opacity, waybar, walker, terminal config, themes,
   wallpaper, night light, idle, lock screen, screenshots, layer rules, workspace
   settings, display config, and user-facing omarchy commands. Excludes Omarchy
-  source development in ~/.local/share/omarchy/ and omarchy-dev-* workflows.
+  source development in ~/.local/share/sublingual-os/ and sublingual-os-dev-* workflows.
 ---
 
 # Omarchy Skill
@@ -25,28 +25,28 @@ It is not for contributing to Omarchy source code.
 - Editing ANY file in `~/.config/hypr/` (window rules, animations, keybindings, monitors, etc.)
 - Editing ANY file in `~/.config/waybar/`, `~/.config/walker/`, `~/.config/mako/`
 - Editing terminal configs (alacritty, kitty, ghostty)
-- Editing ANY file in `~/.config/omarchy/`
+- Editing ANY file in `~/.config/sublingual-os/`
 - Window behavior, animations, opacity, blur, gaps, borders
 - Layer rules, workspace settings, display/monitor configuration
 - Themes, wallpapers, fonts, appearance changes
-- User-facing `omarchy-*` commands (`omarchy-theme-*`, `omarchy-refresh-*`, `omarchy-restart-*`, etc.)
+- User-facing `sublingual-os-*` commands (`sublingual-os-theme-*`, `sublingual-os-refresh-*`, `sublingual-os-restart-*`, etc.)
 - Screenshots, screen recording, night light, idle behavior, lock screen
 
 **If you're about to edit a config file in ~/.config/ on this system, STOP and use this skill first.**
 
-**Do NOT use this skill for Omarchy development tasks** (editing files in `~/.local/share/omarchy/`, creating migrations, or running `omarchy-dev-*` workflows).
+**Do NOT use this skill for Omarchy development tasks** (editing files in `~/.local/share/sublingual-os/`, creating migrations, or running `sublingual-os-dev-*` workflows).
 
 ## Critical Safety Rules
 
-**For end-user customization tasks, NEVER modify anything in `~/.local/share/omarchy/`** - but READING is safe and encouraged.
+**For end-user customization tasks, NEVER modify anything in `~/.local/share/sublingual-os/`** - but READING is safe and encouraged.
 
 This directory contains Omarchy's source files managed by git. Any changes will be:
-- Lost on next `omarchy-update`
+- Lost on next `sublingual-os-update`
 - Cause conflicts with upstream
 - Break the system's update mechanism
 
 ```
-~/.local/share/omarchy/     # READ-ONLY - NEVER EDIT (reading is OK)
+~/.local/share/sublingual-os/     # READ-ONLY - NEVER EDIT (reading is OK)
 ├── bin/                    # Source scripts (symlinked to PATH)
 ├── config/                 # Default config templates
 ├── themes/                 # Stock themes
@@ -55,16 +55,16 @@ This directory contains Omarchy's source files managed by git. Any changes will 
 └── install/                # Installation scripts
 ```
 
-**Reading `~/.local/share/omarchy/` is SAFE and useful** - do it freely to:
-- Understand how omarchy commands work: `cat $(which omarchy-theme-set)`
-- See default configs before customizing: `cat ~/.local/share/omarchy/config/waybar/config.jsonc`
+**Reading `~/.local/share/sublingual-os/` is SAFE and useful** - do it freely to:
+- Understand how omarchy commands work: `cat $(which sublingual-os-theme-set)`
+- See default configs before customizing: `cat ~/.local/share/sublingual-os/config/waybar/config.jsonc`
 - Check stock theme files to copy for customization
-- Reference default hyprland settings: `cat ~/.local/share/omarchy/default/hypr/*`
+- Reference default hyprland settings: `cat ~/.local/share/sublingual-os/default/hypr/*`
 
 **Always use these safe locations instead:**
 - `~/.config/` - User configuration (safe to edit)
-- `~/.config/omarchy/themes/<custom-name>/` - Custom themes (must be real directories)
-- `~/.config/omarchy/hooks/` - Custom automation hooks
+- `~/.config/sublingual-os/themes/<custom-name>/` - Custom themes (must be real directories)
+- `~/.config/sublingual-os/hooks/` - Custom automation hooks
 
 If the request is to develop Omarchy itself, this skill is out of scope. Follow repository development instructions instead of this skill.
 
@@ -84,34 +84,34 @@ Omarchy is built on:
 
 ## Command Discovery
 
-Omarchy provides ~145 commands following `omarchy-<category>-<action>` pattern.
+Omarchy provides ~145 commands following `sublingual-os-<category>-<action>` pattern.
 
 ```bash
 # List all omarchy commands
-compgen -c | grep -E '^omarchy-' | sort -u
+compgen -c | grep -E '^sublingual-os-' | sort -u
 
 # Find commands by category
-compgen -c | grep -E '^omarchy-theme'
-compgen -c | grep -E '^omarchy-restart'
+compgen -c | grep -E '^sublingual-os-theme'
+compgen -c | grep -E '^sublingual-os-restart'
 
 # Read a command's source to understand it
-cat $(which omarchy-theme-set)
+cat $(which sublingual-os-theme-set)
 ```
 
 ### Command Categories
 
 | Prefix | Purpose | Example |
 |--------|---------|---------|
-| `omarchy-refresh-*` | Reset config to defaults (backs up first) | `omarchy-refresh-waybar` |
-| `omarchy-restart-*` | Restart a service/app | `omarchy-restart-waybar` |
-| `omarchy-toggle-*` | Toggle feature on/off | `omarchy-toggle-nightlight` |
-| `omarchy-theme-*` | Theme management | `omarchy-theme-set <name>` |
-| `omarchy-install-*` | Install optional software | `omarchy-install-docker-dbs` |
-| `omarchy-launch-*` | Launch apps | `omarchy-launch-browser` |
-| `omarchy-cmd-*` | System commands | `omarchy-cmd-screenshot` |
-| `omarchy-pkg-*` | Package management | `omarchy-pkg-install <pkg>` |
-| `omarchy-setup-*` | Initial setup tasks | `omarchy-setup-fingerprint` |
-| `omarchy-update-*` | System updates | `omarchy-update` |
+| `sublingual-os-refresh-*` | Reset config to defaults (backs up first) | `sublingual-os-refresh-waybar` |
+| `sublingual-os-restart-*` | Restart a service/app | `sublingual-os-restart-waybar` |
+| `sublingual-os-toggle-*` | Toggle feature on/off | `sublingual-os-toggle-nightlight` |
+| `sublingual-os-theme-*` | Theme management | `sublingual-os-theme-set <name>` |
+| `sublingual-os-install-*` | Install optional software | `sublingual-os-install-docker-dbs` |
+| `sublingual-os-launch-*` | Launch apps | `sublingual-os-launch-browser` |
+| `sublingual-os-cmd-*` | System commands | `sublingual-os-cmd-screenshot` |
+| `sublingual-os-pkg-*` | Package management | `sublingual-os-pkg-install <pkg>` |
+| `sublingual-os-setup-*` | Initial setup tasks | `sublingual-os-setup-fingerprint` |
+| `sublingual-os-update-*` | System updates | `sublingual-os-update` |
 
 ## Configuration Locations
 
@@ -134,7 +134,7 @@ cat $(which omarchy-theme-set)
 **Key behaviors:**
 - Hyprland auto-reloads on config save (no restart needed for most changes)
 - Use `hyprctl reload` to force reload
-- Use `omarchy-refresh-hyprland` to reset to defaults
+- Use `sublingual-os-refresh-hyprland` to reset to defaults
 
 ### Waybar (Status Bar)
 
@@ -144,9 +144,9 @@ cat $(which omarchy-theme-set)
 └── style.css          # Styling
 ```
 
-**Waybar does NOT auto-reload.** You MUST run `omarchy-restart-waybar` after any config changes.
+**Waybar does NOT auto-reload.** You MUST run `sublingual-os-restart-waybar` after any config changes.
 
-**Commands:** `omarchy-restart-waybar`, `omarchy-refresh-waybar`, `omarchy-toggle-waybar`
+**Commands:** `sublingual-os-restart-waybar`, `sublingual-os-refresh-waybar`, `sublingual-os-toggle-waybar`
 
 ### Terminals
 
@@ -156,7 +156,7 @@ cat $(which omarchy-theme-set)
 ~/.config/ghostty/config
 ```
 
-**Command:** `omarchy-restart-terminal`
+**Command:** `sublingual-os-restart-terminal`
 
 ### Other Configs
 
@@ -186,31 +186,31 @@ cp ~/.config/hypr/bindings.conf ~/.config/hypr/bindings.conf.bak.$(date +%s)
 
 # 4. Apply changes
 # - Hyprland: auto-reloads on save (no restart needed)
-# - Waybar: MUST restart with omarchy-restart-waybar
-# - Walker: MUST restart with omarchy-restart-walker
-# - Terminals: MUST restart with omarchy-restart-terminal
+# - Waybar: MUST restart with sublingual-os-restart-waybar
+# - Walker: MUST restart with sublingual-os-restart-walker
+# - Terminals: MUST restart with sublingual-os-restart-terminal
 ```
 
 ### Pattern 2: Make a new theme
 
-1. Create a directory under ~/.config/omarchy/themes.
-2. See how an existing theme is done via ~/.local/share/omarchy/themes/catppuccin.
-3. Download a matching background (or several) from the internet and put them in ~/.config/omarchy/themes/[name-of-new-theme]
-4. When done with the theme, run omarchy-theme-set "Name of new theme"
+1. Create a directory under ~/.config/sublingual-os/themes.
+2. See how an existing theme is done via ~/.local/share/sublingual-os/themes/catppuccin.
+3. Download a matching background (or several) from the internet and put them in ~/.config/sublingual-os/themes/[name-of-new-theme]
+4. When done with the theme, run sublingual-os-theme-set "Name of new theme"
 
 ### Pattern 3: Use Hooks for Automation
 
-Create scripts in `~/.config/omarchy/hooks/` to run automatically on events:
+Create scripts in `~/.config/sublingual-os/hooks/` to run automatically on events:
 
 ```bash
-# Available hooks (see samples in ~/.config/omarchy/hooks/):
-~/.config/omarchy/hooks/
+# Available hooks (see samples in ~/.config/sublingual-os/hooks/):
+~/.config/sublingual-os/hooks/
 ├── theme-set        # Runs after theme change (receives theme name as $1)
 ├── font-set         # Runs after font change
-└── post-update      # Runs after omarchy-update
+└── post-update      # Runs after sublingual-os-update
 ```
 
-Example hook (`~/.config/omarchy/hooks/theme-set`):
+Example hook (`~/.config/sublingual-os/hooks/theme-set`):
 ```bash
 #!/bin/bash
 THEME_NAME=$1
@@ -224,12 +224,12 @@ When customizations go wrong:
 
 ```bash
 # Reset specific config (creates backup automatically)
-omarchy-refresh-waybar
-omarchy-refresh-hyprland
+sublingual-os-refresh-waybar
+sublingual-os-refresh-hyprland
 
 # The refresh command:
 # 1. Backs up current config with timestamp
-# 2. Copies default from ~/.local/share/omarchy/config/
+# 2. Copies default from ~/.local/share/sublingual-os/config/
 # 3. Restarts the component
 ```
 
@@ -238,12 +238,12 @@ omarchy-refresh-hyprland
 ### Themes
 
 ```bash
-omarchy-theme-list              # Show available themes
-omarchy-theme-current           # Show current theme
-omarchy-theme-set <name>        # Apply theme (use "Tokyo Night" not "tokyo-night")
-omarchy-theme-next              # Cycle to next theme
-omarchy-theme-bg-next           # Cycle wallpaper
-omarchy-theme-install <url>     # Install from git repo
+sublingual-os-theme-list              # Show available themes
+sublingual-os-theme-current           # Show current theme
+sublingual-os-theme-set <name>        # Apply theme (use "Tokyo Night" not "tokyo-night")
+sublingual-os-theme-next              # Cycle to next theme
+sublingual-os-theme-bg-next           # Cycle wallpaper
+sublingual-os-theme-install <url>     # Install from git repo
 ```
 
 ### Keybindings
@@ -255,11 +255,11 @@ bind = SUPER, Q, killactive
 bind = SUPER SHIFT, E, exit
 ```
 
-View current bindings: `omarchy-menu-keybindings --print`
+View current bindings: `sublingual-os-menu-keybindings --print`
 
 **IMPORTANT: When re-binding an existing key:**
 
-1. First check existing bindings: `omarchy-menu-keybindings --print`
+1. First check existing bindings: `sublingual-os-menu-keybindings --print`
 2. If the key is already bound, you MUST add an `unbind` directive BEFORE your new `bind`
 3. Inform the user what the key was previously bound to
 
@@ -297,43 +297,43 @@ Window rules go in `~/.config/hypr/hyprland.conf` or a sourced file. Always veri
 ### Fonts
 
 ```bash
-omarchy-font-list               # Available fonts
-omarchy-font-current            # Current font
-omarchy-font-set <name>         # Change font
+sublingual-os-font-list               # Available fonts
+sublingual-os-font-current            # Current font
+sublingual-os-font-set <name>         # Change font
 ```
 
 ### System
 
 ```bash
-omarchy-update                  # Full system update
-omarchy-version                 # Show Omarchy version
-omarchy-debug --no-sudo --print # Debug info (ALWAYS use these flags)
-omarchy-lock-screen             # Lock screen
-omarchy-system-shutdown         # Shutdown
-omarchy-system-reboot           # Reboot
+sublingual-os-update                  # Full system update
+sublingual-os-version                 # Show Omarchy version
+sublingual-os-debug --no-sudo --print # Debug info (ALWAYS use these flags)
+sublingual-os-lock-screen             # Lock screen
+sublingual-os-system-shutdown         # Shutdown
+sublingual-os-system-reboot           # Reboot
 ```
 
-**IMPORTANT:** Always run `omarchy-debug` with `--no-sudo --print` flags to avoid interactive sudo prompts that will hang the terminal.
+**IMPORTANT:** Always run `sublingual-os-debug` with `--no-sudo --print` flags to avoid interactive sudo prompts that will hang the terminal.
 
 ## Troubleshooting
 
 ```bash
 # Get debug information (ALWAYS use these flags to avoid interactive prompts)
-omarchy-debug --no-sudo --print
+sublingual-os-debug --no-sudo --print
 
 # Upload logs for support
-omarchy-upload-log
+sublingual-os-upload-log
 
 # Reset specific config to defaults
-omarchy-refresh-<app>
+sublingual-os-refresh-<app>
 
 # Refresh specific config file
 # config-file path is relative to ~/.config/
-# eg. omarchy-refresh-config hypr/hyprlock.conf will refresh ~/.config/hypr/hyprlock.conf
-omarchy-refresh-config <config-file>
+# eg. sublingual-os-refresh-config hypr/hyprlock.conf will refresh ~/.config/hypr/hyprlock.conf
+sublingual-os-refresh-config <config-file>
 
 # Full reinstall of configs (nuclear option)
-omarchy-reinstall
+sublingual-os-reinstall
 ```
 
 ## Decision Framework
@@ -341,26 +341,26 @@ omarchy-reinstall
 When user requests system changes:
 
 1. **Is it a stock omarchy command?** Use it directly
-2. **Is it a config edit?** Edit in `~/.config/`, never `~/.local/share/omarchy/`
+2. **Is it a config edit?** Edit in `~/.config/`, never `~/.local/share/sublingual-os/`
 3. **Is it a theme customization?** Create a NEW custom theme directory
-4. **Is it automation?** Use hooks in `~/.config/omarchy/hooks/`
-5. **Is it a package install?** Use `omarchy-pkg-add` (or `omarchy-pkg-aur-add` for AUR-only packages)
+4. **Is it automation?** Use hooks in `~/.config/sublingual-os/hooks/`
+5. **Is it a package install?** Use `sublingual-os-pkg-add` (or `sublingual-os-pkg-aur-add` for AUR-only packages)
 6. **Unsure if command exists?** Search with `compgen -c | grep omarchy`
 
 ## Out of Scope
 
 This skill intentionally does not cover Omarchy source development. Do not use this skill for:
-- Editing files in `~/.local/share/omarchy/` (`bin/`, `config/`, `default/`, `themes/`, `migrations/`, etc.)
+- Editing files in `~/.local/share/sublingual-os/` (`bin/`, `config/`, `default/`, `themes/`, `migrations/`, etc.)
 - Creating or editing migrations
-- Running `omarchy-dev-*` commands
+- Running `sublingual-os-dev-*` commands
 
 ## Example Requests
 
-- "Change my theme to catppuccin" -> `omarchy-theme-set catppuccin`
+- "Change my theme to catppuccin" -> `sublingual-os-theme-set catppuccin`
 - "Add a keybinding for Super+E to open file manager" -> Check existing bindings first, add `unbind` if needed, then add `bind` in `~/.config/hypr/bindings.conf`
 - "Configure my external monitor" -> Edit `~/.config/hypr/monitors.conf`
 - "Make the window gaps smaller" -> Edit `~/.config/hypr/looknfeel.conf`
-- "Set up night light to turn on at sunset" -> `omarchy-toggle-nightlight` or edit `~/.config/hypr/hyprsunset.conf`
-- "Customize the catppuccin theme colors" -> Create `~/.config/omarchy/themes/catppuccin-custom/` by copying from stock, then edit
-- "Run a script every time I change themes" -> Create `~/.config/omarchy/hooks/theme-set`
-- "Reset waybar to defaults" -> `omarchy-refresh-waybar`
+- "Set up night light to turn on at sunset" -> `sublingual-os-toggle-nightlight` or edit `~/.config/hypr/hyprsunset.conf`
+- "Customize the catppuccin theme colors" -> Create `~/.config/sublingual-os/themes/catppuccin-custom/` by copying from stock, then edit
+- "Run a script every time I change themes" -> Create `~/.config/sublingual-os/hooks/theme-set`
+- "Reset waybar to defaults" -> `sublingual-os-refresh-waybar`

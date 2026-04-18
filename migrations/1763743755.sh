@@ -1,3 +1,3 @@
 echo "Refresh Walker config to ensure compatibility with latest version"
 
-omarchy-refresh-walker
+sublingual-os-refresh-walker

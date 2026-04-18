@@ -6,17 +6,17 @@ set -e
 hyprctl dispatch tagwindow +noidle &>/dev/null || true
 
 # Perform all update steps
-omarchy-update-keyring
-omarchy-update-available-reset
-omarchy-update-system-pkgs
-omarchy-migrate
-omarchy-update-aur-pkgs
-omarchy-update-orphan-pkgs
-omarchy-hook post-update
+sublingual-os-update-keyring
+sublingual-os-update-available-reset
+sublingual-os-update-system-pkgs
+sublingual-os-migrate
+sublingual-os-update-aur-pkgs
+sublingual-os-update-orphan-pkgs
+sublingual-os-hook post-update
 
-omarchy-update-analyze-logs
+sublingual-os-update-analyze-logs
 
-omarchy-update-restart
+sublingual-os-update-restart
 
 # Re-enable screensaver/sleep after updates
 hyprctl dispatch tagwindow -- -noidle &>/dev/null || true

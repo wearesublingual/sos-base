@@ -1,3 +1,3 @@
-if omarchy-hw-asus-rog; then
-  omarchy-pkg-add asusctl
+if sublingual-os-hw-asus-rog; then
+  sublingual-os-pkg-add asusctl
 fi

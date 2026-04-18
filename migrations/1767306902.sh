@@ -1,11 +1,11 @@
 echo "Migrate to new theme setup"
 
 # Move user-added backgrounds from Omarchy theme folders to user config
-OMARCHY_DIR="$HOME/.local/share/omarchy"
-USER_BACKGROUNDS_DIR="$HOME/.config/omarchy/backgrounds"
+SUBLINGUAL_OS_DIR="$HOME/.local/share/sublingual-os"
+USER_BACKGROUNDS_DIR="$HOME/.config/sublingual-os/backgrounds"
 
-if [[ -d $OMARCHY_DIR/themes ]]; then
-  cd "$OMARCHY_DIR"
+if [[ -d $SUBLINGUAL_OS_DIR/themes ]]; then
+  cd "$SUBLINGUAL_OS_DIR"
 
   # Get list of git-tracked background files (relative to omarchy dir)
   mapfile -t TRACKED_BACKGROUNDS < <(git ls-files --cached 'themes/*/backgrounds/*' 2>/dev/null)
@@ -40,8 +40,8 @@ if [[ -d $OMARCHY_DIR/themes ]]; then
   done
 fi
 
-THEMES_DIR="$HOME/.config/omarchy/themes"
-CURRENT_THEME_LINK="$HOME/.config/omarchy/current/theme"
+THEMES_DIR="$HOME/.config/sublingual-os/themes"
+CURRENT_THEME_LINK="$HOME/.config/sublingual-os/current/theme"
 
 # Get current theme name before removing anything
 CURRENT_THEME_NAME=""
@@ -49,17 +49,17 @@ if [[ -L $CURRENT_THEME_LINK ]]; then
   CURRENT_THEME_NAME=$(basename "$(readlink "$CURRENT_THEME_LINK")")
 elif [[ -d $CURRENT_THEME_LINK ]]; then
   CURRENT_THEME_NAME=$(basename "$CURRENT_THEME_LINK")
-elif [[ -f $HOME/.config/omarchy/current/theme.name ]]; then
-  CURRENT_THEME_NAME=$(cat "$HOME/.config/omarchy/current/theme.name")
+elif [[ -f $HOME/.config/sublingual-os/current/theme.name ]]; then
+  CURRENT_THEME_NAME=$(cat "$HOME/.config/sublingual-os/current/theme.name")
 fi
 
-# Remove all symlinks from ~/.config/omarchy/themes
+# Remove all symlinks from ~/.config/sublingual-os/themes
 find "$THEMES_DIR" -mindepth 1 -maxdepth 1 -type l -delete
 
 # Re-apply the current theme with the new system
 if [[ -n $CURRENT_THEME_NAME ]]; then
-  omarchy-theme-set "$CURRENT_THEME_NAME"
+  sublingual-os-theme-set "$CURRENT_THEME_NAME"
 else
   # Backup to ensure a theme is set if we can't deduce the name
-  omarchy-theme-set "Tokyo Night"
+  sublingual-os-theme-set "Tokyo Night"
 fi

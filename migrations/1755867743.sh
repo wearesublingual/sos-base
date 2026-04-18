@@ -1,4 +1,4 @@
-echo "Copy Omarchy logo to ~/.config/omarchy/branding/screensaver.txt so screensaver can be personalized"
+echo "Copy Omarchy logo to ~/.config/sublingual-os/branding/screensaver.txt so screensaver can be personalized"
 
-mkdir -p ~/.config/omarchy/branding
-cp $OMARCHY_PATH/logo.txt ~/.config/omarchy/branding/screensaver.txt
+mkdir -p ~/.config/sublingual-os/branding
+cp $SUBLINGUAL_OS_PATH/logo.txt ~/.config/sublingual-os/branding/screensaver.txt

@@ -4,15 +4,15 @@
 set -eEo pipefail
 
 # Define Omarchy locations
-export OMARCHY_PATH="$HOME/.local/share/omarchy"
-export OMARCHY_INSTALL="$OMARCHY_PATH/install"
-export OMARCHY_INSTALL_LOG_FILE="/var/log/omarchy-install.log"
-export PATH="$OMARCHY_PATH/bin:$PATH"
+export SUBLINGUAL_OS_PATH="$HOME/.local/share/sublingual-os"
+export SUBLINGUAL_OS_INSTALL="$SUBLINGUAL_OS_PATH/install"
+export SUBLINGUAL_OS_INSTALL_LOG_FILE="/var/log/sublingual-os-install.log"
+export PATH="$SUBLINGUAL_OS_PATH/bin:$PATH"
 
 # Install
-source "$OMARCHY_INSTALL/helpers/all.sh"
-source "$OMARCHY_INSTALL/preflight/all.sh"
-source "$OMARCHY_INSTALL/packaging/all.sh"
-source "$OMARCHY_INSTALL/config/all.sh"
-source "$OMARCHY_INSTALL/login/all.sh"
-source "$OMARCHY_INSTALL/post-install/all.sh"
+source "$SUBLINGUAL_OS_INSTALL/helpers/all.sh"
+source "$SUBLINGUAL_OS_INSTALL/preflight/all.sh"
+source "$SUBLINGUAL_OS_INSTALL/packaging/all.sh"
+source "$SUBLINGUAL_OS_INSTALL/config/all.sh"
+source "$SUBLINGUAL_OS_INSTALL/login/all.sh"
+source "$SUBLINGUAL_OS_INSTALL/post-install/all.sh"

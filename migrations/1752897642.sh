@@ -1,3 +1,3 @@
 echo "Remove needless fcitx5-configtool package"
 
-omarchy-pkg-drop fcitx5-configtool
+sublingual-os-pkg-drop fcitx5-configtool

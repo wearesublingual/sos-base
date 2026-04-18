@@ -9,12 +9,12 @@ if (( EUID == 0 )); then
 fi
 
 echo "Resetting all Omarchy configs"
-cp -R ~/.local/share/omarchy/config/* ~/.config/
-cp ~/.local/share/omarchy/default/bashrc ~/.bashrc
+cp -R ~/.local/share/sublingual-os/config/* ~/.config/
+cp ~/.local/share/sublingual-os/default/bashrc ~/.bashrc
 echo '[[ -f ~/.bashrc ]] && . ~/.bashrc' | tee ~/.bash_profile >/dev/null
 
-$(bash $OMARCHY_PATH/install/config/theme.sh)
+$(bash $SUBLINGUAL_OS_PATH/install/config/theme.sh)
 
-omarchy-refresh-limine
-omarchy-refresh-plymouth
-omarchy-nvim-setup
+sublingual-os-refresh-limine
+sublingual-os-refresh-plymouth
+sublingual-os-nvim-setup

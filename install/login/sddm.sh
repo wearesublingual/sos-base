@@ -1,5 +1,5 @@
 # Install omarchy SDDM theme
-omarchy-refresh-sddm
+sublingual-os-refresh-sddm
 
 # Setup SDDM login service
 sudo mkdir -p /etc/sddm.conf.d

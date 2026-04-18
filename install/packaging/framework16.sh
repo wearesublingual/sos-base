@@ -1,3 +1,3 @@
-if omarchy-hw-framework16; then
-  omarchy-pkg-add qmk-hid
+if sublingual-os-hw-framework16; then
+  sublingual-os-pkg-add qmk-hid
 fi

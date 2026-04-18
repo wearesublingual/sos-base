@@ -1,6 +1,6 @@
-echo "Change to omarchy-nvim package"
-omarchy-pkg-drop omarchy-lazyvim
-omarchy-pkg-add omarchy-nvim
+echo "Change to sublingual-os-nvim package"
+sublingual-os-pkg-drop sublingual-os-lazyvim
+sublingual-os-pkg-add sublingual-os-nvim
 
 # Will trigger to overwrite configs or not to pickup new hot-reload themes
-omarchy-nvim-setup
+sublingual-os-nvim-setup

@@ -31,8 +31,8 @@ end
 -- The main function elephant will call
 function GetEntries()
   local entries = {}
-  local user_theme_dir = os.getenv("HOME") .. "/.config/omarchy/themes"
-  local omarchy_path = os.getenv("OMARCHY_PATH") or ""
+  local user_theme_dir = os.getenv("HOME") .. "/.config/sublingual-os/themes"
+  local omarchy_path = os.getenv("SUBLINGUAL_OS_PATH") or ""
   local default_theme_dir = omarchy_path .. "/themes"
 
   local seen_themes = {}
@@ -77,7 +77,7 @@ function GetEntries()
             Preview = preview_path,
             PreviewType = "file",
             Actions = {
-              activate = "omarchy-theme-set " .. theme_name,
+              activate = "sublingual-os-theme-set " .. theme_name,
             },
           })
         end

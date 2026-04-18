@@ -1,3 +1,3 @@
 echo "Install bash-completion"
 
-omarchy-pkg-add bash-completion
+sublingual-os-pkg-add bash-completion

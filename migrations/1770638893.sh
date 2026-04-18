@@ -1,9 +1,9 @@
 echo "Add Tmux as an option with themed styling"
 
-omarchy-pkg-add tmux
+sublingual-os-pkg-add tmux
 
 if [[ ! -f ~/.config/tmux/tmux.conf ]]; then
   mkdir -p ~/.config/tmux
-  cp $OMARCHY_PATH/config/tmux/tmux.conf ~/.config/tmux/tmux.conf
-  omarchy-theme-refresh
+  cp $SUBLINGUAL_OS_PATH/config/tmux/tmux.conf ~/.config/tmux/tmux.conf
+  sublingual-os-theme-refresh
 fi

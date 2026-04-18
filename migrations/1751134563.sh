@@ -1,3 +1,3 @@
 echo "Remove obsolete gcc14 AUR package that takes eons to update"
 
-omarchy-pkg-drop gcc14
+sublingual-os-pkg-drop gcc14
