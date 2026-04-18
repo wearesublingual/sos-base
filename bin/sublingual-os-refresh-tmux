@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Overwrite the user tmux config with the Omarchy default and reload tmux.
+# Overwrite the user tmux config with the Sublingual OS default and reload tmux.
 
 sublingual-os-refresh-config tmux/tmux.conf
 sublingual-os-restart-tmux

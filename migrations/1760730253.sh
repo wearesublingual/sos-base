@@ -1,3 +1,3 @@
-echo "Install Aether for Omarchy theme creation"
+echo "Install Aether for Sublingual OS theme creation"
 
 sublingual-os-pkg-add aether

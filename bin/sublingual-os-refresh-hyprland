@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Overwrite all the user configs in ~/.config/hypr with the Omarchy defaults.
+# Overwrite all the user configs in ~/.config/hypr with the Sublingual OS defaults.
 
 sublingual-os-refresh-config hypr/autostart.conf
 sublingual-os-refresh-config hypr/bindings.conf

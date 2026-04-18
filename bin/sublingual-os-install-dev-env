@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install one of the supported development environments. Usually called via Install > Development > * in the Omarchy Menu.
+# Install one of the supported development environments. Usually called via Install > Development > * in the Sublingual OS Menu.
 
 if [[ -z $1 ]]; then
   echo "Usage: sublingual-os-install-dev-env <ruby|node|bun|deno|go|laravel|symfony|php|python|elixir|phoenix|rust|java|zig|ocaml|dotnet|clojure|scala>" >&2

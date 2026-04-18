@@ -1,4 +1,4 @@
-echo "Update fastfetch config with new Omarchy logo"
+echo "Update fastfetch config with new Sublingual OS logo"
 
 sublingual-os-refresh-config fastfetch/config.jsonc
 

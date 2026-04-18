@@ -1,8 +1,8 @@
 --
--- Dynamic Omarchy Theme Menu for Elephant/Walker
+-- Dynamic Sublingual OS Theme Menu for Elephant/Walker
 --
 Name = "omarchythemes"
-NamePretty = "Omarchy Themes"
+NamePretty = "Sublingual OS Themes"
 HideFromProviderlist = true
 
 -- Check if file exists using Lua (no subprocess)

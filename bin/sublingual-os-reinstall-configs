@@ -1,14 +1,14 @@
 #!/bin/bash
 set -e
 
-# Overwrite all user configs with the Omarchy defaults.
+# Overwrite all user configs with the Sublingual OS defaults.
 
 if (( EUID == 0 )); then
   echo "Error: This script should not be run as root"
   exit 1
 fi
 
-echo "Resetting all Omarchy configs"
+echo "Resetting all Sublingual OS configs"
 cp -R ~/.local/share/sublingual-os/config/* ~/.config/
 cp ~/.local/share/sublingual-os/default/bashrc ~/.bashrc
 echo '[[ -f ~/.bashrc ]] && . ~/.bashrc' | tee ~/.bash_profile >/dev/null

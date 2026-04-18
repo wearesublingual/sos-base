@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set the branch for Omarchy's git repository.
+# Set the branch for Sublingual OS's git repository.
 
 if (($# == 0)); then
   echo "Usage: sublingual-os-branch-set [master|rc|dev]"

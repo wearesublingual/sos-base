@@ -37,7 +37,7 @@ sudo pacman -Syu --noconfirm --needed git
 # Use custom repo if specified, otherwise default to basecamp/omarchy
 SUBLINGUAL_OS_REPO="${SUBLINGUAL_OS_REPO:-basecamp/omarchy}"
 
-echo -e "\nCloning Omarchy from: https://github.com/${SUBLINGUAL_OS_REPO}.git"
+echo -e "\nCloning Sublingual OS from: https://github.com/${SUBLINGUAL_OS_REPO}.git"
 rm -rf ~/.local/share/sublingual-os/
 git clone "https://github.com/${SUBLINGUAL_OS_REPO}.git" ~/.local/share/sublingual-os >/dev/null
 

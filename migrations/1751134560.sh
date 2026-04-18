@@ -18,7 +18,7 @@ sudo pacman -Sy # Normally not advisable, but we'll do a full -Syu before finish
 mkdir -p ~/.local/state/omarchy/migrations
 touch ~/.local/state/omarchy/migrations/1751134560.sh
 
-# Remove old AUR packages to prevent a super lengthy build on old Omarchy installs
+# Remove old AUR packages to prevent a super lengthy build on old Sublingual OS installs
 sublingual-os-pkg-drop zoom qt5-remoteobjects wf-recorder wl-screenrec
 
 # Get rid of old AUR packages

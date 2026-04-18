@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# sublingual-os-theme-remove: Remove a theme from Omarchy by name
+# sublingual-os-theme-remove: Remove a theme from Sublingual OS by name
 # Usage: sublingual-os-theme-remove <theme-name>
 
 if [[ -z $1 ]]; then

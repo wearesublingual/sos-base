@@ -1,6 +1,6 @@
 # Changes require a restart to take effect.
 
-# Ensure Omarchy bins are in the path
+# Ensure Sublingual OS bins are in the path
 export SUBLINGUAL_OS_PATH=$HOME/.local/share/sublingual-os
 export PATH=$SUBLINGUAL_OS_PATH/bin:$PATH:$HOME/.local/bin
 

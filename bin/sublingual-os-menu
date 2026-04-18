@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Launch the Omarchy Menu or takes a parameter to jump straight to a submenu.
+# Launch the Sublingual OS Menu or takes a parameter to jump straight to a submenu.
 
 export PATH="$HOME/.local/share/sublingual-os/bin:$PATH"
 
@@ -83,7 +83,7 @@ aur_install_and_launch() {
 }
 
 show_learn_menu() {
-  case $(menu "Learn" "  Keybindings\n  Omarchy\n  Hyprland\n󰣇  Arch\n  Neovim\n󱆃  Bash") in
+  case $(menu "Learn" "  Keybindings\n  Sublingual OS\n  Hyprland\n󰣇  Arch\n  Neovim\n󱆃  Bash") in
   *Keybindings*) sublingual-os-menu-keybindings ;;
   *Omarchy*) omarchy-launch-webapp "https://learn.omacom.io/2/the-omarchy-manual" ;;
   *Hyprland*) sublingual-os-launch-webapp "https://wiki.hypr.land/" ;;
@@ -504,8 +504,8 @@ show_remove_elixir_menu() {
 }
 
 show_update_menu() {
-  case $(menu "Update" "  Omarchy\n󰔫  Channel\n  Config\n󰸌  Extra Themes\n  Process\n󰇅  Hardware\n  Firmware\n  Password\n  Timezone\n  Time") in
-  *Omarchy*) present_terminal sublingual-os-update ;;
+  case $(menu "Update" "  Sublingual OS\n󰔫  Channel\n  Config\n󰸌  Extra Themes\n  Process\n󰇅  Hardware\n  Firmware\n  Password\n  Timezone\n  Time") in
+  *Sublingual OS*) present_terminal sublingual-os-update ;;
   *Channel*) show_update_channel_menu ;;
   *Config*) show_update_config_menu ;;
   *Themes*) present_terminal sublingual-os-theme-update ;;

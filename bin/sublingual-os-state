@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Manage persistent state files for Omarchy toggles and settings.
+# Manage persistent state files for Sublingual OS toggles and settings.
 # Usage: sublingual-os-state <set|clear> <state-name-or-pattern>
 # Used to track whether features like suspend, idle lock, etc are enabled or disabled.
 

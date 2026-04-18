@@ -1,7 +1,7 @@
 # Overwrite parts of the sublingual-os-menu with user-specific submenus.
 # See $SUBLINGUAL_OS_PATH/bin/sublingual-os-menu for functions that can be overwritten.
 #
-# WARNING: Overwritten functions will obviously not be updated when Omarchy changes.
+# WARNING: Overwritten functions will obviously not be updated when Sublingual OS changes.
 #
 # Example of minimal system menu:
 #

@@ -1,6 +1,6 @@
 echo "Migrate to new theme setup"
 
-# Move user-added backgrounds from Omarchy theme folders to user config
+# Move user-added backgrounds from Sublingual OS theme folders to user config
 SUBLINGUAL_OS_DIR="$HOME/.local/share/sublingual-os"
 USER_BACKGROUNDS_DIR="$HOME/.config/sublingual-os/backgrounds"
 

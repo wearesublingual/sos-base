@@ -3,7 +3,7 @@
 # Exit immediately if a command exits with a non-zero status
 set -eEo pipefail
 
-# Define Omarchy locations
+# Define Sublingual OS locations
 export SUBLINGUAL_OS_PATH="$HOME/.local/share/sublingual-os"
 export SUBLINGUAL_OS_INSTALL="$SUBLINGUAL_OS_PATH/install"
 export SUBLINGUAL_OS_INSTALL_LOG_FILE="/var/log/sublingual-os-install.log"

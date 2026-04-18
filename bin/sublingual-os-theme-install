@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# sublingual-os-theme-install: Install a new theme from a git repo for Omarchy
+# sublingual-os-theme-install: Install a new theme from a git repo for Sublingual OS
 # Usage: sublingual-os-theme-install <git-repo-url>
 
 if [[ -z $1 ]]; then

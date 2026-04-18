@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Finish the installation of Omarchy with items that can only be done after logging in.
+# Finish the installation of Sublingual OS with items that can only be done after logging in.
 
 set -e
 

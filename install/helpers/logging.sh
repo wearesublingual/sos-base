@@ -58,7 +58,7 @@ start_install_log() {
 
   export SUBLINGUAL_OS_START_TIME=$(date '+%Y-%m-%d %H:%M:%S')
 
-  echo "=== Omarchy Installation Started: $SUBLINGUAL_OS_START_TIME ===" >>"$SUBLINGUAL_OS_INSTALL_LOG_FILE"
+  echo "=== Sublingual OS Installation Started: $SUBLINGUAL_OS_START_TIME ===" >>"$SUBLINGUAL_OS_INSTALL_LOG_FILE"
   start_log_output
 }
 
@@ -68,7 +68,7 @@ stop_install_log() {
 
   if [[ -n ${SUBLINGUAL_OS_INSTALL_LOG_FILE:-} ]]; then
     SUBLINGUAL_OS_END_TIME=$(date '+%Y-%m-%d %H:%M:%S')
-    echo "=== Omarchy Installation Completed: $SUBLINGUAL_OS_END_TIME ===" >>"$SUBLINGUAL_OS_INSTALL_LOG_FILE"
+    echo "=== Sublingual OS Installation Completed: $SUBLINGUAL_OS_END_TIME ===" >>"$SUBLINGUAL_OS_INSTALL_LOG_FILE"
     echo "" >>"$SUBLINGUAL_OS_INSTALL_LOG_FILE"
     echo "=== Installation Time Summary ===" >>"$SUBLINGUAL_OS_INSTALL_LOG_FILE"
 
@@ -96,7 +96,7 @@ stop_install_log() {
       SUBLINGUAL_OS_MINS=$((SUBLINGUAL_OS_DURATION / 60))
       SUBLINGUAL_OS_SECS=$((SUBLINGUAL_OS_DURATION % 60))
 
-      echo "Omarchy:     ${SUBLINGUAL_OS_MINS}m ${SUBLINGUAL_OS_SECS}s" >>"$SUBLINGUAL_OS_INSTALL_LOG_FILE"
+      echo "Sublingual OS:     ${SUBLINGUAL_OS_MINS}m ${SUBLINGUAL_OS_SECS}s" >>"$SUBLINGUAL_OS_INSTALL_LOG_FILE"
 
       if [[ -n $ARCH_DURATION ]]; then
         TOTAL_DURATION=$((ARCH_DURATION + SUBLINGUAL_OS_DURATION))
