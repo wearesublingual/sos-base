@@ -90,8 +90,9 @@ nss-mdns
 nvim
 obs-studio
 obsidian
-sublingual-os-nvim
-sublingual-os-walker
+# Upstream [omarchy] repo packages — keep original names
+omarchy-nvim
+omarchy-walker
 pamixer
 pinta
 playerctl
