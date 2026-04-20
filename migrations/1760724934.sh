@@ -19,5 +19,5 @@ sublingual-os-pkg-add gvfs-nfs
 
 if [[ ! -d $HOME/.config/nvim ]]; then
   echo "Add missing nvim config"
-  sublingual-os-nvim-setup
+  omarchy-nvim-setup
 fi

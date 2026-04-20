@@ -1,2 +1,2 @@
-echo "Install sublingual-os-walker meta package"
-sublingual-os-pkg-add sublingual-os-walker
+echo "Install omarchy-walker meta package"
+sublingual-os-pkg-add omarchy-walker

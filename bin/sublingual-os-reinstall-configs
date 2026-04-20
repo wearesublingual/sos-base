@@ -17,4 +17,4 @@ $(bash $SUBLINGUAL_OS_PATH/install/config/theme.sh)
 
 sublingual-os-refresh-limine
 sublingual-os-refresh-plymouth
-sublingual-os-nvim-setup
+omarchy-nvim-setup
