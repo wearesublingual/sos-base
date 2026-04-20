@@ -10,7 +10,7 @@ if [[ -n ${SUBLINGUAL_OS_ONLINE_INSTALL:-} ]]; then
   sudo pacman-key --lsign-key 40DFB630FF42BCFFB047046CF0134EE680CAC571
 
   sudo pacman -Sy
-  sublingual-os-pkg-add sublingual-os-keyring
+  sublingual-os-pkg-add omarchy-keyring
 
   # Refresh all repos
   sudo pacman -Syyuu --noconfirm
