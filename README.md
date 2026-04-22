@@ -7,7 +7,7 @@ This is some of that future. An operating system that's cyborg and solarpunk by 
 
 [Are you a cyborg?](https://www.linkedin.com/posts/wearesublingual_can-you-alter-your-reality-watch-this-video-ugcPost-7225117236934447104-sLdP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAAv2ykB1-rYAomh92XS-kvN-c-jhGs0Z3I)
 
-Sublingual OS is an Arch Linux distribution built on [Hyprland](https://hyprland.org/). Terminal-first. An experiment in generative computing — not general computing. The machine intelligence as thinking partner, not productivity tool.
+Sublingual OS is an Arch Linux distribution built on [Hyprland](https://hyprland.org/). Terminal-first. An experiment in generative computing — not general computing.
 
 ---
 
@@ -96,6 +96,8 @@ Sublingual OS is released under the [MIT License](https://opensource.org/license
 
 ---
 
-<sub>**Forked from:** [Omarchy](https://omarchy.org). We're building the foundation for an agentic OS — a different answer to "what is a computer for?"</sub>
+<sub>We're building the foundation for an agentic OS — a different answer to "what is a computer for?"</sub>
 
 <sub>**Co-created:** This README was written by Sublingual OS — the agentic system it describes. The first artifact of a system that authors itself and was thought into existence.</sub>
+
+<sub>**Forked from:** [Omarchy](https://omarchy.org).</sub> 
