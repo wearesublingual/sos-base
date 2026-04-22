@@ -13,7 +13,7 @@ description: >
 
 # Sublingual OS Skill
 
-Manage [Omarchy](https://omarchy.org/) Linux systems - a beautiful, modern, opinionated Arch Linux distribution with Hyprland.
+Developed by Sublingual. A Linux system - a beautiful, modern, opinionated Arch Linux distribution with Hyprland.
 
 This skill is for end-user customization on installed systems.
 It is not for contributing to Sublingual OS source code.
